@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="439.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.scias.view.AddSCIController">
+   <children>
+      <Label layoutX="208.0" layoutY="24.0" text="Add SCI Data">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="109.0" layoutY="106.0" text="Software Component" />
+      <Label layoutX="32.0" layoutY="145.0" text="Energy consumed by software in kWh (E)" />
+      <Label layoutX="35.0" layoutY="192.0" text="Energy consumed by software in kWh (I)" />
+      <Label fx:id="errorMessage" layoutX="208.0" layoutY="70.0" text="Error Messnage" textFill="#dd0a0a" />
+      <Label layoutX="66.0" layoutY="237.0" text="Embodied emissions (gCo2) (M)" />
+      <TextField fx:id="e" layoutX="264.0" layoutY="141.0" prefHeight="25.0" prefWidth="164.0" />
+      <Label layoutX="95.0" layoutY="279.0" text="Functional Unit (R)" />
+      <TextField fx:id="i" layoutX="262.0" layoutY="180.0" prefHeight="25.0" prefWidth="164.0" />
+      <TextField fx:id="m" layoutX="264.0" layoutY="233.0" prefHeight="25.0" prefWidth="164.0" />
+      <ComboBox fx:id="functionalUnit" layoutX="264.0" layoutY="275.0" prefHeight="25.0" prefWidth="164.0" />
+      <Button fx:id="addBtn" layoutX="397.0" layoutY="374.0" mnemonicParsing="false" onAction="#addBtnClicked" text="Add" />
+      <Label fx:id="successMessage" layoutX="264.0" layoutY="400.0" text="Success message" textFill="#0ce068" />
+      <ChoiceBox fx:id="softwareComponent" layoutX="264.0" layoutY="102.0" prefHeight="25.0" prefWidth="164.0" />
+      <Label layoutX="122.0" layoutY="331.0" text="SCI Score: " />
+      <Label fx:id="sciScore" layoutX="262.0" layoutY="323.0" prefHeight="25.0" prefWidth="164.0" text="0.00" />
+      <Button fx:id="calculateSCIBtn" layoutX="209.0" layoutY="374.0" mnemonicParsing="false" onAction="#calculateSCIBtnClicked" text="Calculate" />
+   </children>
+</AnchorPane>
